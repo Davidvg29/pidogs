@@ -1,0 +1,6 @@
+export const ADD_DOGS = "ADD_DOGS"
+export const CAMBIAR_ORIGEN = "CAMBIAR_ORIGEN"
+export const ORDER = "ORDER"
+export const ADD_TEMPERAMENTS = "ADD_TEMPERAMENTS"
+export const ORDER_TEMPERAMENTS = "ORDER_TEMPERAMENTS"
+export const SEARCH_INPUT = "SEARCH_INPUT"
