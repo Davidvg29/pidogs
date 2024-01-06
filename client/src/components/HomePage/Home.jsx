@@ -1,6 +1,7 @@
 import Cards from "../Cards/Cards"
 import Nav from "../NavBar/Nav"
-
+import Header from "../Header/Header"
+import css from "./Home.module.css"
 import {useSelector, useDispatch} from "react-redux"
 import { useEffect } from "react";
 import { addDogs, addTemperaments } from "../../Redux/actions";
@@ -18,9 +19,12 @@ function Home() {
         dispatch(addTemperaments())
     },[dispatch, traerDatosDe, stateSearchInput])
     
+    
+
     return(
-        <div>
-            component home
+        <div className={css.Home}>
+            
+            <Header/>
             <Nav temperaments={temperaments}/>
             <Cards dogs={dogs}/>
             

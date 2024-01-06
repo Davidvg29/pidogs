@@ -1,0 +1,68 @@
+.FormPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(247, 247, 247);
+    height: 100vh;
+    width: 100vw;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(97, 97, 97);
+}
+.temperamentos{
+    /* background-color: green; */
+    max-height: 100px;
+    overflow-y: auto;
+}
+
+form{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(97, 97, 97);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: -2px 2px 5px 0px rgba(0, 0, 0, 0.247);
+}
+.divInput{
+    /* background-color: greenyellow; */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.divInput input{
+    font-size: 18px;
+    
+}
+.error{
+    color:rgb(255, 72, 72);
+    font-size: 15px;
+}
+
+.divCrearRaza{
+    /* background-color: red; */
+    text-align: end;
+}
+ button.CrearRaza{
+    /* width: 100px; */
+    /* height:30px; */
+    border-radius: 10px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 1px solid rgb(83, 173, 201);
+    background-color: rgb(83, 173, 201);
+    font-size: 15px;
+    color: rgb(97, 97, 97);
+    font-weight: 550;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 10px;
+}
+ button.CrearRaza:hover{
+    cursor: pointer;
+    
+}
+
+
+@media screen and (min-width:700px){
+    form{
+        width: 400px;
+    }
+}

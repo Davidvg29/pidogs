@@ -25,10 +25,10 @@ const getDogsName = async (req, res)=>{
   const dogsTotal=[...data, ...dogDB]
 
   if (dogsTotal.length>0) return res.status(200).json(dogsTotal)
-     else return res.status(200).json(dogstotal=[{name:"raza inexistente"}])
+  else return res.status(200).json(dogsTotal=[{name:"raza inexistente"}])
 
   } catch (error) {
-    res.status(500).json({error: error.mensaje})
+    res.status(500).json({error: error.message})
   }
 
 }

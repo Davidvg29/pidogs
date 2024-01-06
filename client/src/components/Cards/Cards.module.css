@@ -1,0 +1,31 @@
+.Cards{
+    background-color: rgb(247, 247, 247);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* height: 50vh; */
+    margin: 0;
+    padding-top: 10px;
+}
+.Buttons{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    background-color: rgb(247, 247, 247);
+    
+}
+.Buttons button{
+    /* background-color: red; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 10px;
+    font-size: 15px;
+    width: 100px;
+    font-weight: 600;
+    border-radius: 20px;
+    color:rgb(97, 97, 97);
+    border: 1px solid rgb(83, 173, 201);
+}
+.Buttons button:hover{
+    cursor: pointer;
+    background-color: rgb(83, 173, 201);
+}

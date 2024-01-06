@@ -1,0 +1,241 @@
+@font-face{
+    font-family: "font title";
+    src: url(../../assets/RubikDoodleShadow-Regular.ttf);
+    /* src: url(../../assets/SeymourOne-Regular.ttf); */
+}
+
+h1{
+    margin:0;
+}
+.Landing{
+      background-color: rgb(247, 247, 247);
+    width: 100vw;
+    height: 100vh;
+    background-image: url(..//../assets/dos\ perritos\ en\ balde\ rosa\ y\ fondo\ blanco.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    text-align: center;
+    
+}
+
+.h1Landing{
+    color: rgb(83, 173, 201);
+    text-align: center;
+    font-family:font title;
+    padding-top: 50px;
+    font-size: 45px;
+}
+.divH4Landing{
+    display: flex;
+    justify-content: center;
+}
+.h4Landing{
+    
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(97, 97, 97);
+    /* background-color: rgba(255, 110, 110, 0.315); */
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 300px;
+    /* margin: auto; */
+    margin-top: 30px;
+    border-radius: 10px;
+    font-size: 15px;
+    transform: rotate(5deg);
+}
+button.buttonLanding{
+    width: 100px;
+    height:40px;
+    border-radius: 10px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 2px solid rgb(83, 173, 201);
+    background-color: rgba(21, 106, 180, 0);
+    font-size: 15px;
+    color: rgb(97, 97, 97);
+    font-weight: 600;
+    
+}
+.buttonLanding{
+    margin-top:1px;
+    
+}
+button.buttonLanding:hover{
+    background-color: rgb(83, 173, 201);
+    cursor: pointer;
+}
+
+
+@media screen and (min-width:600px){
+    .Landing{
+        background-image: url(..//..//assets/perros\ listos.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .h1Landing{
+        font-size: 95px;
+        /* margin-right: 250px; */
+        padding-top: 50px;
+    }
+    .divH4Landing{
+        display: flex;
+        justify-content: end;
+        /* background-color: red; */
+        width: 100vw;
+        margin-right: 250px;
+        margin-top: 30px;
+    }
+    .h4Landing{
+        /* margin-top:30px; */
+        width: 500px;
+        padding: 20px;
+        border-radius: 5px;
+       font-size: 20px;
+        margin-right: 30px;
+        
+    }
+   
+    .divButtonLanding{
+        width: 100%;
+        display: flex;
+        justify-content: end;
+    }
+    button.buttonLanding{
+        width: 160px;
+        height: 60px;
+        font-size: 18px;
+        
+    }
+    
+    .buttonLanding{
+        margin-right: 150px;
+        
+    }
+}
+
+@media screen and (min-width:600px) and (max-width:750px){
+
+    .Landing{
+        /* background-color: red; */
+    }
+    .h1Landing{
+        font-size: 65px;
+        /* margin-right: 250px; */
+        padding-top: 35px;
+    }
+    .divH4Landing{
+        display: flex;
+        justify-content: end;
+        /* background-color: red; */
+        width: 100vw;
+        margin-right: 20px;
+        margin-top: -10px;
+    }
+    .h4Landing{
+        /* margin-top:30px; */
+        width: 350px;
+        padding: 20px;
+        border-radius: 5px;
+       font-size: 15px;
+        /* margin-right: 30px; */
+        
+    }
+    .divButtonLanding{
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        margin-top: 40px;
+    }
+    button.buttonLanding{
+        width: 100px;
+        height: 40px;
+        font-size: 18px;
+        
+    }
+    
+    .buttonLanding{
+        margin-right: 50px;
+        
+    }
+}
+
+@media screen and (min-width:750px) and (max-width:900px){
+
+    .divH4Landing{
+        display: flex;
+        justify-content: end;
+        width: 100vw;
+        margin-right: 20px;
+        margin-top: -10px;
+    }
+    .h4Landing{
+        width: 350px;
+       font-size: 15px; 
+    }
+    .divButtonLanding{
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        margin-top: 40px;
+    }
+    button.buttonLanding{
+        width: 100px;
+        height: 40px;
+        font-size: 18px;
+        
+    }
+    
+    .buttonLanding{
+        margin-right: 50px;
+        /* width: 150px; */
+    }
+}
+
+@media screen and (min-width:900px) and (max-width:1024px){
+    .divH4Landing{
+        display: flex;
+        justify-content: end;
+        width: 100vw;
+        margin-right: 20px;
+        margin-top: -10px;
+    }
+    .h4Landing{
+        width: 400px;
+       font-size: 15px; 
+    }
+    .divButtonLanding{
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        margin-top: 40px;
+    }
+    button.buttonLanding{
+        width: 120px;
+        height: 40px;
+        font-size: 18px;
+        
+    }
+    
+    .buttonLanding{
+        margin-right: 90px;
+        
+    }
+}
+
+@media screen and (min-width:900px){
+    .h4Landing{
+        width: 500px;
+       font-size: 18px; 
+    }
+    .divButtonLanding{
+        margin-top: 90px;
+    }
+    .buttonLanding{
+        margin-right: 130px;
+    }
+}
+

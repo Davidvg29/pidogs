@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux"
 import {searchInput} from "../../Redux/actions"
-
+import css from "./Search.module.css"
 function Search() {
     const dispatch = useDispatch()
 
@@ -9,8 +9,8 @@ function Search() {
     }
 
     return(
-        <div>
-            <input onChange={handlerSearchInput} type="text" placeholder="ingresar raza"/>
+        <div className={css.Search}>
+            <input onChange={handlerSearchInput} type="text" placeholder="buscar raza"/>
            
         </div>
     )

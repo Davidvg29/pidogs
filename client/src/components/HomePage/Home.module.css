@@ -1,0 +1,12 @@
+@font-face{
+    font-family: "font title";
+    src: url(../../assets/RubikDoodleShadow-Regular.ttf);
+    /* src: url(../../assets/SeymourOne-Regular.ttf); */
+}
+
+.Home{
+    background-color: rgb(247, 247, 247);
+    width: 100vw;
+    height: 100vh;
+    margin: 0%;
+}

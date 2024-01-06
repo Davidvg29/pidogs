@@ -32,13 +32,14 @@ const rootReducer = (state = initialState, {type, payload})=>{
         case ORDER_TEMPERAMENTS:
             //  console.log(payload)
              const copia = [...state.dogs]
-              console.log(copia)
-              console.log(state.dogs)
+            //   console.log(copia)
+            //   console.log(state.dogs)
 
               if (payload === 'all') {
+                //   console.log("limoiando filtro")
                 return {
                   ...state,
-                  dogs: copia,
+                  dogs:copia,
                 };
               }
 
@@ -46,7 +47,7 @@ const rootReducer = (state = initialState, {type, payload})=>{
                 const a = dog.temperament
                 return a&&a.includes(payload)
             })
-
+            // console.log("perros filtrados", filtrar)
              return{
                  ...state,
                  dogs: filtrar

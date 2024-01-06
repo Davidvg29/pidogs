@@ -2,6 +2,7 @@ import Search from "../SearchBar/Search"
 import {order, cambiarOrigen, orderTemperaments} from "../../Redux/actions"
 import { useDispatch } from "react-redux"
 import {Link} from "react-router-dom"
+import css from "./Nav.module.css"
 
 function Nav({temperaments}) {
     const dispatch = useDispatch()
@@ -19,19 +20,24 @@ function Nav({temperaments}) {
     }
 
     return(
-        <div>
+        <div className={css.Nav}>
             <Search/>
+            <div>
             <label>Traer datos de: </label>
                 <select id="" onChange={traerDatosDe}>
                     <option value="api">Api dogs</option>
                     <option value="dataBase">Database</option>
                 </select>
+            </div>
+                <div>
                 <label>Ordenar por: </label>
                 <select  onChange={orderDogs} name="" id="">
                     <option value="ascendente">Ascendente</option>
                     <option value="descendente">Descendente</option>
                 </select>
-                <label>filtrar por temperamentos: </label>
+                </div>
+                <div>
+                <label>temperamentos: </label>
             <select name="" id="" onChange={filterTemperaments}>
                 <option value="all">todos</option>
                 {
@@ -42,7 +48,11 @@ function Nav({temperaments}) {
                 <option>cargando...</option>
                 }
             </select>
-            <Link to="/form">agregar nueva raza</Link>
+                </div>
+            <div className={css.buttonCrearRaza}>
+                <Link to="/form"><button>crear raza</button></Link>
+            </div>
+            
         </div>
     )
 }

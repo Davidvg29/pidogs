@@ -1,0 +1,67 @@
+
+.Nav{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* width: 100vw; */
+    /* justify-content: center; */
+    /* height: 120px; */
+    /* padding-right: 20px; */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(97, 97, 97);
+}
+
+
+
+
+.buttonCrearRaza{
+    margin: 10px;
+    /* width: 100vw; */
+    /* text-align: start; */
+    /* padding-right: 15px; */
+    
+}
+
+.buttonCrearRaza button{
+    /* width: 100px; */
+    /* height:30px; */
+    border-radius: 10px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 1px solid rgb(83, 173, 201);
+    background-color: rgba(21, 106, 180, 0);
+    font-size: 15px;
+    color: rgb(97, 97, 97);
+    font-weight: 550;
+    text-decoration: none;
+    padding: 10px;
+}
+.buttonCrearRaza button:hover{
+    cursor: pointer;
+    background-color: rgb(83, 173, 201);
+}
+
+ select{
+    background-color: rgba(255, 0, 0, 0);
+    border: none;
+    border-bottom: 1px solid rgb(97, 97, 97);
+    margin-bottom: 10px;
+    /* padding-left: 15px; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    outline: none;
+    text-align: center;
+}
+
+@media screen and (min-width:600px){
+   .Nav{
+       /* background-color: red; */
+       flex-direction: row;
+       flex-wrap: wrap;
+       /* align-items: center; */
+       justify-content: center;
+   }
+   select{
+       margin: 10px;
+   }
+}
+

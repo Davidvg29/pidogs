@@ -1,3 +1,52 @@
-.img{
-    width: 100px;
+.Card{
+    /* display: flex; */
+    
+    /* background-color: rgba(166, 204, 216, 0.342); */
+    width: 150px;
+    /* height: 10px; */
+    margin: 3px;
+    color: rgb(97, 97, 97);
+    border-radius: 10px;
+}
+.img:hover{
+    /* background-color: red; */
+    transform: scale(1.5); 
+    cursor: pointer;
+    border-radius: 0;
+}
+
+img.img{
+    width: 150px;
+    height: 110px;
+    box-shadow: -1px 1px 5px 3px rgba(0, 0, 0, 0.219);
+    border-radius: 5px;
+    /* border-top-left-radius: 10px; */
+    /* border-top-right-radius: 10px; */
+}
+.Name{
+    background-color: rgba(255, 255, 255, 0.226);
+    text-align: center;
+    padding: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* border: 1px solid rgb(83, 173, 201); */
+    border-radius: 3px;
+    border: 1px solid;
+  border-color: rgba(255, 0, 0, 0) rgb(83, 173, 201) rgb(83, 173, 201) rgb(83, 173, 201);
+}
+
+
+
+@media screen and (min-width:900px){
+    .Card{
+
+        width: 230px;
+        
+        margin: 3px;
+        /* color: rgb(97, 97, 97);
+        border-radius: 10px; */
+    }
+    img.img{
+        width: 230px;
+        height: 190px;
+    }
 }

@@ -1,6 +1,6 @@
 import { useState } from "react"
 import Card from "../Card/Card"
-
+import css from "./Cards.module.css"
 function Cards({dogs}) {
     
     const [min, setMin] = useState(0)
@@ -25,6 +25,7 @@ function Cards({dogs}) {
 
     return(
         <div>
+            <div className={css.Cards}>
             {dogs.length!==0?
             arrayDividioEn8.map((dog)=>(
                 <Card 
@@ -42,7 +43,8 @@ function Cards({dogs}) {
             )):
             (<div>cargando...</div>)}
             
-            <div>
+        </div>
+            <div className={css.Buttons}>
                 <button onClick={anterior}>anterior</button>
                 <button onClick={siguiente}>siguiente</button>
             </div>

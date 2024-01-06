@@ -1,5 +1,6 @@
-import './App.css';
+
 import {Routes, Route} from "react-router-dom"
+import css from "./App.module.css"
 
 import Landing from './components/LandingPage/Landing';
 import Home from "./components/HomePage/Home"
@@ -10,7 +11,7 @@ import Form from "./components/FormPage/Form"
 function App() {
 
   return (
-    <div className="App">
+    <div className={css.App}>
       
     <Routes>
       <Route path="/" element={<Landing/>}/>
