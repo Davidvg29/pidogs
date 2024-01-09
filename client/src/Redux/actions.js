@@ -53,7 +53,7 @@ export const addTemperaments = ()=>async(dispatch)=>{
   }
 }
 
-export const orderTemperaments=(orderValue)=>{
+export let orderTemperaments=(orderValue)=>{
   return {
     type: ORDER_TEMPERAMENTS,
     payload : orderValue

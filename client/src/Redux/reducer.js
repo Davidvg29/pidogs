@@ -1,7 +1,8 @@
 import { ADD_DOGS, ORDER, CAMBIAR_ORIGEN, ADD_TEMPERAMENTS, ORDER_TEMPERAMENTS, SEARCH_INPUT } from "./action-types";
 
-const initialState = {
+let initialState = {
     dogs: [],
+    sinFiltroDogs: [],
     temperaments: [],
     traerDatos: "api",
     searchInput: ""
@@ -12,7 +13,7 @@ const rootReducer = (state = initialState, {type, payload})=>{
     
     switch (type) {
         case ADD_DOGS:
-            return {...state, dogs: payload}
+            return {...state, dogs: payload, sinFiltroDogs: payload}
 
         case ORDER:
             const copiaState = [...state.dogs]
@@ -30,28 +31,17 @@ const rootReducer = (state = initialState, {type, payload})=>{
             return {...state, temperaments: payload}
 
         case ORDER_TEMPERAMENTS:
-            //  console.log(payload)
-             const copia = [...state.dogs]
-            //   console.log(copia)
-            //   console.log(state.dogs)
+            const dogsCopia = [...state.sinFiltroDogs];
+      let filtro = dogsCopia;
 
-              if (payload === 'all') {
-                //   console.log("limoiando filtro")
-                return {
-                  ...state,
-                  dogs:copia,
-                };
-              }
+      if (payload !== "all") {
+        filtro = dogsCopia.filter((dog) => dog.temperament && dog.temperament.includes(payload));
+      }
 
-            let filtrar = copia.filter((dog)=>{
-                const a = dog.temperament
-                return a&&a.includes(payload)
-            })
-            // console.log("perros filtrados", filtrar)
-             return{
-                 ...state,
-                 dogs: filtrar
-             }
+      return {
+        ...state,
+        dogs: filtro
+      };
             
              case SEARCH_INPUT:
                  return{
