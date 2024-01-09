@@ -1,7 +1,7 @@
 import axios from "axios"
 import css from "./Detail.module.css";
 import { useEffect, useState } from "react"
-import { useParams, Link } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import Header from "../Header/Header";
 
 const Detail = ()=>{

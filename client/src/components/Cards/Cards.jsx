@@ -21,7 +21,7 @@ function Cards({dogs}) {
         }
     }
 
-   
+  
 
     return(
         <div>

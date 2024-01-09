@@ -13,7 +13,10 @@
     max-height: 100px;
     overflow-y: auto;
 }
-
+.errorSubmit{
+    color: red;
+    font-size: 20px;
+}
 form{
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(97, 97, 97);

@@ -17,9 +17,9 @@ const postDogs = async (req, res)=>{
 
     if (created) {
             await user.addTemperaments(dog.temperament);
-          res.status(200).json("Dog creado exitosamente");
+          res.status(200).json("Raza creada exitosamente");
     } else {
-        res.status(209).json("dog ya existe")
+        res.status(209).json("Raza ya existe, intenta con otro nombre de raza")
     }
        
     } catch (error) {

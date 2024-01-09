@@ -26,6 +26,7 @@ const Form =()=>{
         life_span:"",
         temperament: ""
     })
+    const[errorSubmit, setErrorSubmit] = useState("")
 
     const handleDogData = (e)=>{
             setDogData({
@@ -37,18 +38,33 @@ const Form =()=>{
     }
     const sendForm = async (e)=>{
       e.preventDefault()
-        if (Object.values(error).length === 0) {
+        if (Object.values(error).length === 0 ) {
         console.log(dogData)
         try {
           const response = await axios.post("http://localhost:3001/dogs", dogData)
-          console.log(response.dogData)
+          setErrorSubmit(response.data)
+          if (response.data === "Raza creada exitosamente") {
+            setDogData({
+              name: "",
+              image:"",
+              height:"",
+              weigth:"",
+              life_span:"",
+              temperament: ""
+            })
+            
+            setTimeout(() => {
+              setErrorSubmit("")
+          }, 2000)
+          }
         } catch (error) {
-          console.error("error al crear dog", error.message)
+          setErrorSubmit("Error al crear dog", error.message)
         }
         } else{
-          alert("primero debes arreglar los errores")
+          setErrorSubmit("Primero debes arreglar los errores")
         }
     }
+
     const handlerTemperaments = (e, temperament) => {
         if (selectTemperaments === "") {
           setSelectTemperaments(e.target.value)
@@ -84,13 +100,18 @@ const Form =()=>{
         }));
       }, [idTemperaments]);
       
-      console.log(error)
+      // console.log(error)
+
+
+      
+
 
     return (
         <div className={css.FormPage}>
           <Header/>
             <p>COMPLETA PARA CREAR NUEVA RAZA</p>
-            <form onSubmit={sendForm}>
+            <p className={css.errorSubmit}>{errorSubmit}</p>
+            <form onSubmit={sendForm} id="idForm">
                 <div className={css.divInput}>
                   <label htmlFor="">Nombre: </label>
                   <input type="text" placeholder="nombre de raza" name="name" value={dogData.name} onChange={handleDogData}/>
